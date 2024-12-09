@@ -1,0 +1,441 @@
+/*GENERAL*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #100d49;
+}
+
+/*FONTS*/
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/*genering font family to body*/
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/*When moving to links, it goes smooth*/
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: #100d49;
+}
+
+/*TRANSITION*/
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/*DESKTOP NAV*/
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  font-size: 22px;
+  color: rgb(236, 214, 37);
+  text-decoration: none; 
+}
+
+a:hover {
+  color: #50e0ff;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(236, 214, 37);
+}
+
+.logo {
+  font-size: 42px;
+  color: rgb(236, 214, 37);
+  z-index: 1;
+}
+
+.logo:hover {
+  cursor: default;
+  color: #50e0ff;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(236, 214, 37);
+}
+
+/*HAMBURGER MENU*/
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+/*Mobiili hamburger menu iconi*/
+.hamburger-icon span {
+  width: 100%;
+  height: 3px;
+  background-color: #ecd625;
+  z-index: 1;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #100d49;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ecd625;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+/*Nämä kääntävät hamburger menu iconia ristiin X*/
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+/* HOME */
+#home {
+  width: 100%; /* Varmistaa, että osio täyttää ruudun */
+  height: 100vh; /* Korkeus täyttää koko näkyvän ikkunan */
+}
+
+.welcome-text {
+  text-align: center;
+  color: #ecd625;
+  font-size: 18px;
+  margin: 20px auto;
+  max-width: 800px;
+  line-height: 1.6;
+  z-index: 1;
+}
+/*Etusivun pilvikuvan asettelua*/
+
+.cloud-container {
+  position: relative; /* Pilven ja tekstin kohdistamiseen */
+  text-align: center; /* Keskittää sisällön */
+}
+
+.cloud-image {
+  width: 600px; /* Muuta kokoa tarpeen mukaan */
+  height: auto; /* Pitää mittasuhteet oikeina */
+  z-index: 1;
+}
+
+
+.cloud-text {
+  position: absolute; /* Asettaa tekstin pilven päälle */
+  top: 35%; /* Sijoittaa tekstin keskelle pystysuunnassa */
+  left: 50%; /* Sijoittaa tekstin keskelle vaakasuunnassa */
+  transform: translate(-50%, -50%); /* Keskittää tekstin täydellisesti */
+  color: #100d49; /* Tekstin väri */
+  text-shadow: 2px 2px 4px rgb(80, 224, 255); /* Tekstin varjo */
+  font-size: 16px; /* Tekstin koko */
+  font-weight: bold; /* Korostaa tekstiä */
+  padding: 5px; /* Lisää tilaa tekstin ympärille */
+  border-radius: 10px; /* Pyöristää tekstilaatikon kulmat */
+  max-width: 300px;
+  z-index: 1;
+}
+
+/*PAINIKKEET*/
+/* Painikkeiden säiliö */
+.button-container {
+  display: flex;
+  justify-content: center; /* Keskittää painikkeet vaakasuunnassa */
+  gap: 30px; /* Väli painikkeiden välillä */
+  margin-top: 30px; /* Etäisyys yläpuolisesta sisällöstä */
+}
+
+/* Painikkeet */
+.cta-button {
+  background-color: #ecd625; /* Keltainen väri */
+  color: #100d49; /* Tummansininen teksti */
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* Lihavoitu teksti */
+  font-size: 18px;
+  padding: 15px 30px;
+  border: none; /* Poistaa reunukset */
+  border-radius: 8px; /* Pyöristetyt kulmat */
+  cursor: pointer;
+  transition: background-color 300ms ease, transform 150ms ease;
+  margin: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1;
+}
+
+/* Hover-efekti painikkeille */
+.cta-button:hover {
+  background-color: #50e0ff; /* Vaaleansininen väri hoverilla */
+  transform: scale(1.05); /* Hieman suurempi koko hoverilla */
+}
+
+/* Painikkeen aktiivinen tila */
+.cta-button:active {
+  transform: scale(0.95); /* Klikkauksen aikana painike hieman pienenee */
+}
+
+/* Tietopankki ja Cyberkoe-osiot */
+#tietopankki,
+#cyberkoe {
+  padding: 50px 20px;
+  background-color: #100d49; /* Tummansininen taustaväri */
+  width: 100%;
+  min-height: 100vh; 
+  position: relative; /* Parempi asettelu */
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #ecd625; /* Keltainen väri otsikoille */
+  margin-bottom: 20px; /* Lisää tilaa otsikon ja sisällön väliin */
+}
+
+/* Tietopankin tietolaatikot */
+.fact-box {
+  background-color: #ecd625; /* Keltainen tausta */
+  color: #100d49; /* Tummansininen teksti */
+  font-size: 16px; /* Tekstin koko */
+  font-weight: bold;
+  border-radius: 10px; /* Pyöristetyt kulmat */
+  padding: 20px;
+  margin: 20px auto; /* Väli laatikoiden välillä ja keskitys */
+  max-width: 600px; /* Laatikoiden maksimileveys */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hieno varjo */
+}
+
+/* Cyberkoe kysymyksen keskitys */
+.quiz-container-wrapper {
+  background-color: #50e0ff; /* Turkoosi laatikko */
+  padding: 40px; /* Sisämarginaali */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center; /* Keskittää kysymyslaatikon */
+  align-items: center;
+  width: 100%;
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ecd625; /* Keltainen tausta */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Vastauspainikkeet */
+.answers {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.answer {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #100d49; /* Tummansininen vastauslaatikko */
+  color: #ecd625; /* Keltainen teksti vastauksessa */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.answer:hover {
+  background-color: #50e0ff; /* Turkoosi väri hover-tilassa */
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #100d49; /* Tummansininen teksti palautteessa */
+}
+
+.new-question-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #1abc9c; /* Turkoosi väri vastaa-painikkeelle */
+  color: #100d49;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 300ms ease, transform 150ms ease;
+  display: block;  /* Muuttaa painike blokiksi */
+  margin: 20px auto; /* Keskittaa painikkeen */
+}
+
+.new-question-btn:hover {
+  background-color: #16a085; /* Tumma turkoosi hover-tilassa */
+  transform: scale(1.05);
+}
+
+.new-question-btn:active {
+  transform: scale(0.95); /* Klikkauksen aikana painike hieman pienenee */
+}
+
+/* About Us -osion tyylit */
+
+/* Yleinen keskitys säilöissä */
+.container {
+  max-width: 800px;
+  margin: 0 auto; /* Keskittää sisällön vaakasuunnassa */
+  padding: 20px;
+  text-align: center; /* Keskittää tekstin */
+}
+
+/* Otsikko */
+h1 {
+  font-size: 32px;
+  color: #ecd625;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #ecd625;
+}
+
+.about-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+
+/*FOOTER*/
+footer {
+  position: fixed; /* Kiinnittää footerin alareunaan */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2258f4; /* Tummansininen tausta */
+  color: #ecd625; /* Keltainen teksti */
+  text-align: center; /* Keskittää tekstin */
+  padding: 10px;
+  font-size: 14px;
+  z-index: 1000; /* Varmistaa, että footer on päällä */
+}
+
+footer p {
+  margin: 0;
+}
+
+/*PALLOT*/
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(151, 136, 23); /* Keltainen pallo */
+  z-index: -1; /* Pallot taakse */
+}
+
+.circle.blue {
+  background-color: #2258f4; /* Sininen pallo */
+}
+
+/* Pallojen koon ja paikan määrittely */
+.circle-top-left-yellow {
+  width: 100px;
+  height: 100px;
+  top: 30px;
+  left: 30px;
+  z-index: -1;
+}
+.circle-top-left-blue {
+  width: 40px;
+  height: 40px;
+  top: 75px;
+  left: 75px;
+}
+
+.circle-top-right-yellow {
+  width: 150px;
+  height: 150px;
+  top: -25px;
+  right: -20px;
+}
+.circle-top-right-blue {
+  width: 80px;
+  height: 80px;
+  top: 35px;
+  right: 31px;
+}

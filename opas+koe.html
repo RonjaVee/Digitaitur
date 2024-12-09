@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyberkoe ja Tietopankki</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+<!-- työpöytänavigaatio-->>
+<nav id="desktop-nav" aria-label="Päävalikko">
+  <a href="index.html" class="logo poppins-extrabold">Digitaituri</a>
+  <div>
+    <ul class="nav-links">
+      <li>
+        <a href="opas+koe.html" onclick="toggleMenu()" class="poppins-extrabold" aria-label="Opi ja testaa">Opi ja
+          testaa</a>
+      </li>
+      <li>
+        <a href="aboutus.html" onclick="toggleMenu()" class="poppins-extrabold"
+          aria-label="Tietoa tekijöistä">Meistä</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- hampurilaisnavigaatio -->
+<nav id="hamburger-nav" aria-label="Päävalikko">
+  <a href="index.html" class="logo poppins-extrabold">Digitaituri</a>
+  <div class="hamburger-menu">
+    <div class="hamburger-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="menu-links">
+      <ul>
+        <li>
+          <a href="opas+koe.html" onclick="toggleMenu()" class="poppins-extrabold" aria-label="Opi ja testaa">Opi ja
+            testaa</a>
+        </li>
+        <li>
+          <a href="aboutus.html" onclick="toggleMenu()" class="poppins-extrabold"
+            aria-label="Tietoa tekijöistä">Meistä</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>  
+        <!-- Tietopankki-osio -->
+        <section id="tietopankki">
+          <h2>Tietopankki</h2>
+          <div class="fact-box">
+            <p>
+              Tiesitkö? “Salasana” on suomalaisten kolmanneksi yleisin salasana.
+              Varmista, että käytät vahvoja salasanoja!
+            </p>
+          </div>
+          <div class="fact-box">
+            <p>
+              Vinkki: Käytä kaksivaiheista tunnistautumista, jotta tilisi pysyy
+              paremmin suojattuna!
+            </p>
+          </div>
+          <div class="fact-box">
+            <p>
+              Tiesitkö? Älä käytä samaa salasanaa eri palveluissa – salasanojen
+              kierrätys tekee tietovuodoista vaarallisempia.
+            </p>
+          </div>
+          <div class="fact-box">
+            <p>
+              Kun puhelimesi tarjoaa sinulle ohjelmistopäivitystä, se tulisi asentaa niin
+              pian kuin mahdollista. Vanhentunut ohjelmisto on alttiimpi hyökkäyksille.
+            </p>
+          </div>
+          <div class="fact-box">
+            <p>
+              Tunnista huijarit! Mikäli jokin on liian hyvää ollakseen totta, kannattaa
+              siihen suhtautua varauksella. Myös hoputtaminen ja kiristäminen ovat huijarin tunnusmerkkejä.
+              Mikäli epäilet, että sinua yritetään huijata, kysy apua aikuiselta.
+            </p>
+          </div>
+          <div class="fact-box">
+            <p>
+              Älä anna millekään sivustolle henkilökohtaisia tietojasi, kuten kotiosoitettasi
+              tai sinun tai vanhempiesi pankkikortin tietoja. Mikäli haluat tehdä ostoja jossakin palvelussa tai
+              haluaisit käyttää palvelua joka edellyttää tietojasi, kysy ensin aikuiselta lupa.
+            </p>
+          </div>
+        </section>
+
+
+        <!-- Cyberkoe-osio -->
+        <section id="cyberkoe">
+          <h2>Cyberkoe</h2>
+          <div class="quiz-container">
+            <p class="question">Mikä on tärkein sääntö tietoturvassa?</p>
+            <div class="answers">
+              <button class="answer" onclick="checkAnswer(this, false)">
+                Käytä aina samaa salasanaa
+              </button>
+              <button class="answer" onclick="checkAnswer(this, false)">
+                Älä koskaan vaihda salasanoja
+              </button>
+              <button class="answer" onclick="checkAnswer(this, true)">
+                Luo vahva ja uniikki salasana
+              </button>
+            </div>
+            <p class="feedback"></p>
+            <button class="new-question-btn" onclick="loadNewQuestion()">
+              Uusi kysymys
+            </button>
+          </div>
+        </section>
+
+        <!-- Taustapallot -->
+        <div class="circle circle-top-left-yellow"></div>
+        <div class="circle blue circle-top-left-blue"></div>
+        <div class="circle circle-top-right-yellow"></div>
+        <div class="circle blue circle-top-right-blue"></div>
+
+        <footer>
+          <p>@ 2024 Digitaiturit. Kaikki oikeudet pidätetään.</p>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

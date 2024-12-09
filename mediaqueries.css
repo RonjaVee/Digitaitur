@@ -1,0 +1,89 @@
+/* Suuret näytöt (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+
+  /* Piilotetaan desktop-nav ja näytetään hamburger-nav */
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+  }
+}
+
+/* Keskikokoiset näytöt (max-width: 768px) */
+@media (max-width: 768px) {
+
+  /* Etusivun alalaidan marginaali */
+  #home {
+    margin-bottom: 80px;
+    /* Lisää väliä sisältöosion ja footerin väliin */
+  }
+
+  /* Pilven skaalaus mobiilissa */
+  .cloud-image {
+    width: 350px;
+    /* Pienempi leveys mobiilissa */
+    height: 210px;
+    /* Pienempi korkeus mobiilissa */
+  }
+
+  .cloud-text {
+    top: 25%;
+    /* Pienempi pystysuunnassa */
+    font-size: 12px;
+    /* Pienempi fonttikoko mobiilissa */
+  }
+
+  /* Button-container keskikokoisissa näytöissä */
+  .button-container {
+    flex-direction: column;
+    /* Pinotaan painikkeet pystysuunnassa */
+    gap: 1rem;
+    /* Suurempi väli pystysuuntaan */
+  }
+
+  /* Tietopankki ja Cyberkoe mobiilissa */
+  #tietopankki,
+  #cyberkoe,
+  #about-us {
+    padding: 30px 15px;
+    /* Pienempi padding mobiilissa */
+    min-height: auto;
+    /* Korkeus sisällön mukaan */
+    margin-bottom: 80px;
+    /* Lisää väliä sisältöosion ja footerin väliin */
+  }
+
+  .fact-box {
+    margin: 15px auto;
+    /* Pienempi marginaali mobiilissa */
+    padding: 15px;
+    /* Pienempi padding mobiilissa */
+  }
+
+  /* Kyberkoe */
+  .answer {
+    font-size: 14px;
+    /* Pienempi fonttikoko mobiilissa */
+    padding: 8px 16px;
+    /* Vähentää paddingia, jotta laatikot eivät ole liian suuria */
+    max-width: 100%;
+    /* Vastauslaatikko vie koko tilan mutta ei veny taustan ulkopuolelle */
+    box-sizing: border-box;
+    /* Varmistaa, että padding ei lisää kokoa */
+  }
+
+  .answers {
+    flex-direction: column;
+    /* Kasaamalla vastaukset pystysuunnassa */
+    gap: 10px;
+    /* Pienempi väli vastauksille */
+  }
+
+  .quiz-container-wrapper {
+    padding: 20px; /* Pienentää paddingia */
+    width: 90%; /* Leveys rajoitetaan */
+    box-sizing: border-box; /* Varmistaa, ettei padding ylitä laatikon leveyttä */
+  }
+}

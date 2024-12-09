@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIGITAITURI – LASTEN JA NUORTEN OPAS TIETOTURVAAN</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <!-- työpöytänavigaatio-->>
+  <nav id="desktop-nav" aria-label="Päävalikko">
+    <a href="index.html" class="logo poppins-extrabold">Digitaituri</a>
+    <div>
+      <ul class="nav-links">
+        <li>
+          <a href="opas+koe.html" onclick="toggleMenu()" class="poppins-extrabold" aria-label="Opi ja testaa">Opi ja
+            testaa</a>
+        </li>
+        <li>
+          <a href="aboutus.html" onclick="toggleMenu()" class="poppins-extrabold"
+            aria-label="Tietoa tekijöistä">Meistä</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- hampurilaisnavigaatio -->
+  <nav id="hamburger-nav" aria-label="Päävalikko">
+    <a href="index.html" class="logo poppins-extrabold">Digitaituri</a>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <ul>
+          <li>
+            <a href="opas+koe.html" onclick="toggleMenu()" class="poppins-extrabold" aria-label="Opi ja testaa">Opi ja
+              testaa</a>
+          </li>
+          <li>
+            <a href="aboutus.html" onclick="toggleMenu()" class="poppins-extrabold"
+              aria-label="Tietoa tekijöistä">Meistä</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section id="home">
+    <div class="section cloud-container">
+      <p class="welcome-text">
+        Nykyään lähes kaikki on verkossa – koulutehtävät, viestit, pelit ja
+        paljon muuta. Tämä tekee tietoturvasta tärkeää, koska verkossa voi
+        kohdata riskejä, kuten huijauksia ja haittaohjelmia. Tietoturvan
+        ymmärtäminen auttaa meitä suojaamaan omia tietojamme ja toimimaan
+        turvallisesti netissä. Se on jokaisen vastuulla, sillä pienillä
+        virheillä voi olla iso vaikutus. Vastuullinen netin käyttö suojelee
+        kaikkia.
+      </p>
+    </div>
+    <!-- Pilvikuva -->
+    <div class="cloud-container">
+      <img src="assets/pilvikuva.png" alt="Cloud Illustration" class="cloud-image" />
+      <p class="cloud-text" id="cloud-text-facts"></p>
+      <!-- linkit eteenpäin -->
+      <div class="button-container">
+        <button class="cta-button" onclick="window.location.href='opas+koe.html'">
+          Opi tietoturvaa
+        </button>
+        <button class="cta-button" onclick="window.location.href='aboutus.html'">
+          Kulissien takana
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>@ 2024 DigiTaituri. Kaikki oikeudet pidätetään.</p>
+  </footer>
+
+  <!-- Taustapallot -->
+  <div class="circle circle-top-left-yellow"></div>
+  <div class="circle blue circle-top-left-blue"></div>
+  <div class="circle circle-top-right-yellow"></div>
+  <div class="circle blue circle-top-right-blue"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
