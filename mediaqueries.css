@@ -100,7 +100,7 @@
     font-size: 8px; /* Vielä pienempi fontti */
     top: 20%; /* Parempi sijainti pienillä näytöillä */
     text-align: center; /* Keskitetään teksti */
-    width: 90%;  /* Leveys rajoitetaan */
+    width: 70%;  /* Leveys rajoitetaan */
   }
 
   .button-container {
@@ -108,7 +108,7 @@
   }
 
   #home {
-    margin-bottom: 120px; /* Lisää tilaa, jotta footer ei peitä sisältöä */
+    margin-bottom: 160px; /* Lisää tilaa, jotta footer ei peitä sisältöä */
   }
 
   footer {
