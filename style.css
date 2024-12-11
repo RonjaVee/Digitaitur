@@ -344,7 +344,7 @@ section h2 {
 }
 
 .new-question-btn:hover {
-  background-color: #16a085; /* Tumma turkoosi hover-tilassa */
+  background-color: #50e0ff; /* Tumma turkoosi hover-tilassa */
   transform: scale(1.05);
 }
 
