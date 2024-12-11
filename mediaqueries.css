@@ -87,3 +87,32 @@
     box-sizing: border-box; /* Varmistaa, ettei padding ylitä laatikon leveyttä */
   }
 }
+
+/* Hyvin pienet näytöt (max-width: 360px) */
+@media (max-width: 360px) {
+  .cloud-image {
+    width: 250px; /* Vähennetään leveys */
+    height: auto; /* Suhteellinen korkeus */
+    margin: 0 auto; /* Keskitetään kuva */
+  }
+
+  .cloud-text {
+    font-size: 10px; /* Vielä pienempi fontti */
+    top: 20%; /* Parempi sijainti pienillä näytöillä */
+    text-align: center; /* Keskitetään teksti */
+    width: 100%; /* Annetaan tekstille enemmän tilaa */
+  }
+
+  .button-container {
+    gap: 0.5rem; /* Pienempi väli painikkeiden välillä */
+  }
+
+  #home {
+    margin-bottom: 100px; /* Lisää tilaa, jotta footer ei peitä sisältöä */
+  }
+
+  footer {
+    padding: 10px 5px; /* Pienennetään footerin paddingia */
+    font-size: 10px; /* Pienempi fonttikoko footerille */
+  }
+}
